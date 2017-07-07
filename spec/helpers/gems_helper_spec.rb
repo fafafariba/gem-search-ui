@@ -13,3 +13,7 @@ require 'rails_helper'
 RSpec.describe GemsHelper, type: :helper do
   pending "add some examples to (or delete) #{__FILE__}"
 end
+
+def json_res
+  JSON.parse(response.body)
+end

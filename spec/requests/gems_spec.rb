@@ -19,7 +19,7 @@ RSpec.describe "RubyGems API", type: :request do
 			before { get "/gems/#{valid_name}" }
 			
 			it "returns Gem name" do
-				expect(JSON.parse(response.body)["name"]).to match(name)
+				expect(json_res["name"]).to match(name)
 			end 
 			
 			it "returns Gem info " do

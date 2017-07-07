@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'byebug'
 
 RSpec.describe "RubyGems API", type: :request do
 	let(:valid_name) { "bcrypt" }
@@ -23,11 +22,11 @@ RSpec.describe "RubyGems API", type: :request do
 			end 
 			
 			it "returns Gem info " do
-				expect(JSON.parse(response.body)["info"]).to match(info)
+				expect(json_res["info"]).to match(info)
 			end
 			
 			it "returns Gem dependencies" do
-				expect(JSON.parse(response.body)["dependencies"]).to match(dependencies)
+				expect(json_res["dependencies"]).to match(dependencies)
 			end
 
 			it "returns status code 200" do
@@ -40,8 +39,7 @@ RSpec.describe "RubyGems API", type: :request do
 			before { get "/gems/#{invalid_name}" }
 			
 			it "returns an error" do
-				debugger
-				expect(JSON.parse(response.body)["errors"]).to include(/Gem not found/)
+				expect(json_res["errors"]).to include(/Gem not found/)
 			end
 
 			it "returns status code 404" do

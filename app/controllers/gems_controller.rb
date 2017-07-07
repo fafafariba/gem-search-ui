@@ -8,7 +8,7 @@ class GemsController < ApplicationController
 		if @gem
 			render json: { name: @gem["name"], info: @gem["info"], dependencies: @gem["dependencies"] }, status: :ok
 		else
-			render json: { error: "Gem not found" }, status: :not_found
+			render json: { errors: ["Gem not found"] }, status: :not_found
 		end
 	end
 end

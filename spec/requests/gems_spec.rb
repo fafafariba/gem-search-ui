@@ -41,7 +41,7 @@ RSpec.describe "RubyGems API", type: :request do
 			
 			it "returns an error" do
 				debugger
-				expect(response.body).to match(/Gem not found/)
+				expect(JSON.parse(response.body)["errors"]).to include(/Gem not found/)
 			end
 
 			it "returns status code 404" do

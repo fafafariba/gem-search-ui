@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'byebug'
 
-RSpec.describe "Gems API", type: :request do
+RSpec.describe "RubyGems API", type: :request do
 	let(:valid_name) { "bcrypt" }
 	let(:name) { "bcrypt" }
 	let(:info) {
@@ -40,6 +40,7 @@ RSpec.describe "Gems API", type: :request do
 			before { get "/gems/#{invalid_name}" }
 			
 			it "returns an error" do
+				debugger
 				expect(response.body).to match(/Gem not found/)
 			end
 

@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   # get '/favorites' => "static_pages#favorites"
 
   defaults format: :json do
-    resources :gems, only: [:index]
+    resources :gems, param: :name, only: [:show]
   end
 end

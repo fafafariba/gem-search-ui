@@ -1,7 +1,8 @@
 require 'rails_helper'
+require 'byebug'
 
 RSpec.describe "Gems API", type: :request do
-	let(:valid_query) { "bcrypt" }
+	let(:valid_name) { "bcrypt" }
 	let(:name) { "bcrypt" }
 	let(:info) {
 		"    bcrypt() is a sophisticated and secure hash algorithm designed by The OpenBSD project\n    for hashing passwords. The bcrypt Ruby gem provides a simple wrapper for safely handling\n    passwords.\n"
@@ -13,15 +14,16 @@ RSpec.describe "Gems API", type: :request do
 		"runtime":[]
 		}
 	}
-	let(:invalid_query) { "asdff" }
+	let(:invalid_name) { "asdff" }
 
 	describe "GET /gems" do
 		
-		context "when the query matches a Gem" do 
+		context "when the name matches a Gem" do 
 			
-			before { get "/gems?search=#{valid_query}" }
+			before { get "/gems/#{valid_name}" }
 
-			it "returns multiple gems" do 
+			it "returns only one gem" do 
+				debugger
 				expect(JSON.parse(response.body).size).to be > 1
 			end
 			
@@ -42,9 +44,9 @@ RSpec.describe "Gems API", type: :request do
 			end
 		end
 
-		context "when the query doesn't match any Gem" do
+		context "when the name doesn't match any Gem" do
 		
-			before { get "/gems?search=#{invalid_query}" }
+			before { get "/gems/#{invalid_name}" }
 			
 			it "returns an error" do
 				expect(response.body).to match(/Gem not found/)

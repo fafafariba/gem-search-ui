@@ -9,7 +9,7 @@ RSpec.describe "RubyGems API", type: :request do
 	let(:dependencies) {
 		{"development"=>[{"name"=>"rake-compiler", "requirements"=>"~> 0.9.2"}, {"name"=>"rdoc", "requirements"=>"~> 3.12"}, {"name"=>"rspec", "requirements"=>">= 3"}], "runtime"=>[]}
 	}
-	let(:invalid_name) { "asdff" }
+	let(:invalid_name) { "parser-" }
 
 	describe "GET /gems" do
 		

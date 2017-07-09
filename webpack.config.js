@@ -19,6 +19,18 @@ module.exports = {
         query: {
           presets: ['react', 'es2015', 'env']
         }
+      },
+      {
+        test: /\.(woff2?|jpe?g|png|gif|svg|ico)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            name: '[name]-[hash].[ext]',
+            outputPath: 'webpack-assets/',
+            publicPath: '/assets/webpack-assets/',
+            limit: 10000,
+          },
+        },
       }
     ]
   },

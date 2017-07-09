@@ -6,14 +6,14 @@ import Favorites from './components/Favorites/favorites';
 
 const App = ()=> (
  <Router>
-    <div className="app">
+    <main className="app">
 			<Nav />
 			<Switch>
 				<Route path="/favorites" component={Favorites}/>
 				<Route exact path="/" component={Search}/>
 				<Route render={ () => <p>Not Found</p> } />
 			</Switch>
-    </div>
+    </main>
   </Router>
 );
 

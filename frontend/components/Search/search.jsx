@@ -8,7 +8,6 @@ class Search extends React.Component {
 		<main className="search">
 			<h1>Search Gems</h1>
 			<SearchBar />
-			<img src={'../../../assets/map.png'} />
 		</main>
 		);
 	}

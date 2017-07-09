@@ -1,6 +1,6 @@
 .nav {
 	
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
 	min-width: 532px;
@@ -30,12 +30,13 @@
 		}
 
 		.active {
-			background-color: rgba(255,255,255,0.3);
+			background-color: rgba(255,255,255,0.17);
 		}
 
 		a {
 		color: white;
-		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 1px;
 		padding: 20px;
 		text-decoration: none;
 		}	

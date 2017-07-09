@@ -16,9 +16,12 @@ class SearchBar extends React.Component {
 	render(){
 		return (
 			<main className="search-bar">
-				<form>
+				<form className="form">
 					<input type="text" onChange={this.inputHandler}
                 value={this.state.query}/>
+					<div className="magnifying-glass">
+						<img src={'../../../assets/magnifying-glass.png'} alt="Search" />
+					</div>
 				</form>
 			</main>
 		);

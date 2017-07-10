@@ -37,7 +37,7 @@ class Gem extends React.Component {
 				<div>
 					<ul className="gem-name">
 						<li>
-							<a href={`https://rubygems.org/${this.props.name}`}>{this.props.name}</a>
+							<a href={`https://rubygems.org/gems/${this.props.name}`}>{this.props.name}</a>
 						</li> 
 						<li>
 							<img src={`../../assets/star-${this.state.favorite ? "blue" : "gray"}`} alt="Favorite" onClick={ () => this.favoriteHandler(this.props.name) } />

@@ -19,7 +19,15 @@
 				font-size: 18px;
 				letter-spacing: 1px;
 			}
-			.magnifying-glass img{
+			#errors {
+				color: #FF4F4F;
+				border-color: #FF4F4F;
+			}
+			.magnify-btn {
+				padding: 0;
+				margin: 0;
+				border: none;
+				background-color: transparent;
 				position: absolute;
 				right: 40px;
 				top: 85px;
@@ -27,5 +35,13 @@
 		}
 		
 	}
-
+	.errors {
+		display: flex;
+		justify-content: center;
+		color: #FF4F4F;
+		font : {
+			size: 24px;
+			weight: 700;
+		}
+	}
 }

@@ -1,6 +1,6 @@
-export const queryGem = query => (
+export const fetchGem = query => (
 	$.ajax({
 		method: 'GET',
-		url: `gem/${query}`
+		url: `gems/${query}`
 	})
 );

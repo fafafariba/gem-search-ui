@@ -1,20 +1,28 @@
-import * as APIUtil from '../utils/gemAPIUtil';
+import { fetchGem } from '../utils/gemAPIUtil';
 
 export const RECEIVE_GEM = 'RECEIVE_GEM';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
-export const receiveGem = gem => ({
+const receiveGem = gem => ({
 	type: RECEIVE_GEM,
 	gem
 });
 
-export const receiveErrors = errors => ({
+const receiveErrors = errors => ({
 	type: RECEIVE_ERRORS,
 	errors
 });
 
-const fetchGem = gem => dispatch => (
-	APIUtil.queryGem(gem)
-	.then(gem => dispatch(receiveGem(gem)))
-	.catch(errors => dispatch(receiveErrors(error)))
+const receiveNoErrors = () => ({
+		type: CLEAR_ERRORS,
+		errors: null
+});
+
+export const queryGem = gem => dispatch => (
+	fetchGem(gem).then(gem => dispatch(receiveGem(gem))).fail(errors => dispatch(receiveErrors(errors.responseJSON.errors)))
+);
+
+export const clearErrors = () => dispatch => (
+	dispatch(receiveNoErrors())
 );

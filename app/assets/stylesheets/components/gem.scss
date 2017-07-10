@@ -1,0 +1,38 @@
+.gem {
+	margin-left: 50px;
+	
+	ul {
+		padding: 0;
+		
+		li {
+			margin-right: 10px;
+		}
+	}
+	h5 {
+		font-weight: 400;
+		margin-bottom: 13px;
+		text-transform: uppercase;
+	}
+
+	.gem-name {
+		display: flex;
+
+		img:hover {
+			cursor: pointer;
+		}
+	}
+	.gem-info {
+		margin-top: 36px;
+
+		p {
+			font-weight: 300;
+		}
+	}
+	.gem-dependencies {
+		margin-top: 34px;
+
+		ul {
+			margin-top: 16px;
+		}
+	}
+}

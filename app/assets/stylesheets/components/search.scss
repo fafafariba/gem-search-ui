@@ -10,7 +10,7 @@
 			position: relative;
 			input {
 				margin: 50px 0;
-				height: 90px;
+				height: 89px;
 				width: 780px;
 				padding: 35px;
 				border: 1px solid #5F5F5F;
@@ -20,6 +20,7 @@
 				letter-spacing: 1px;
 			}
 			#errors {
+				margin-bottom: 14px;
 				color: #FF4F4F;
 				border-color: #FF4F4F;
 			}
@@ -31,6 +32,11 @@
 				position: absolute;
 				right: 40px;
 				top: 85px;
+				#errors {
+					background-color: #FF4F4F;
+					filter: brightness(100%);
+					-webkit-filter: brightness(100%);
+				}
 			}
 		}
 		

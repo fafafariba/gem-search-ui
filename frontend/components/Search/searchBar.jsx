@@ -9,14 +9,12 @@ class SearchBar extends React.Component {
 		this.errors = this.props.errors;
 	}
 	componentWillReceiveProps(nextProps){
-		console.log('inside');
 		this.errors = nextProps.errors;
 	}
 
 	componentWillUnmount(){
 		this.errorHandler();
 	}
-
 
 	inputHandler(e){
 		e.preventDefault();
@@ -31,7 +29,7 @@ class SearchBar extends React.Component {
 	}
 
 	errorHandler(){
-		if(this.errors) this.props.clearErrors();
+		if (this.errors) this.props.clearErrors();
 	}
 
 	render(){
@@ -39,7 +37,7 @@ class SearchBar extends React.Component {
 		let errors = <div></div>;
 		if (this.errors) {
 			errors = (
-			<p className="errors">Oh no! Looks like that gem can’t be found.</p>
+				<p className="errors">Oh no! Looks like that gem can’t be found.</p>
 			);
 		}
 		return (

@@ -3,10 +3,16 @@ html {
 	height: 100vh;
 }
 
+body {
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
 li {
 	list-style: none;
 }
 
 a {
 	font-size: 18px;
+	letter-spacing: 1px;
 }

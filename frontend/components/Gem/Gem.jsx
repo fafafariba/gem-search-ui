@@ -4,16 +4,16 @@ import GemDependency from './GemDependency';
 class Gem extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = {favorite: localStorage.getItem(name) ? true : false};
+		this.state = {favorite: localStorage.getItem(this.props.name) ? true : false};
 		this.favoriteHandler = this.favoriteHandler.bind(this);
 	}
 
 	favoriteHandler(){
 		if (this.state.favorite) {
-			localStorage.removeItem(name);
+			localStorage.removeItem(this.props.name);
 			this.setState({favorite: false});
 		} else {
-			localStorage.setItem(name, true);
+			localStorage.setItem(this.props.name, true);
 			this.setState({favorite: true});
 		}
 	}
@@ -26,7 +26,7 @@ class Gem extends React.Component {
 
 		if (this.props.dependencies && this.props.dependencies.length) {
 			dependencies = (
-				this.props.dependencies.map(name => <GemDependency name={name} />
+				this.props.dependencies.map(name => <GemDependency name={name} key={name}/>
 			));
 		}
 

@@ -5,7 +5,6 @@ class GemDependency extends React.Component {
 		super(props);
 		this.state = ({ favorite: localStorage.getItem(this.props.name) ? true : false });
 		this.favoriteHandler = this.favoriteHandler.bind(this);
-		console.log("inside gem dependency");
 	}
 
 	favoriteHandler(){
@@ -22,7 +21,7 @@ class GemDependency extends React.Component {
 	
 		return(
 			<div>
-				<ul className="gem-name" key={this.props.name}>
+				<ul className="gem-name">
 					<li>
 						<a href={`https://rubygems.org/gems/${this.props.name}`}>{this.props.name}</a>
 					</li>

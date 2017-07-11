@@ -1,5 +1,6 @@
 .favorites {
-	max-width: 780px;
+	max-width: 700px;
+	margin-bottom: 100px;
 
 	h1 {
 		margin-bottom: 90px;
@@ -11,7 +12,7 @@
 		flex-wrap: wrap;
 	
 		ul {
-			margin-right: 20px;
+			margin-bottom: 20px;
 			padding: 0;
 			display: flex;
 			min-width: 200px;

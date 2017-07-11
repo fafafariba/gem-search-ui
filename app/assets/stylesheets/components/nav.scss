@@ -1,11 +1,18 @@
 .nav {
 	
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	min-width: 532px;
 	min-height: 900px;
 	background-image: url('../map.png');
+
+	@media screen and (max-width: 1275px) and (min-width: 768px){
+		.nav {
+			background-color: rgba(255,255,255,0.17);
+			width: 20%;
+		}
+	}
 
 	.logo {
 		display: flex;

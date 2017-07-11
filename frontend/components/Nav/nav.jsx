@@ -6,7 +6,6 @@ class Nav extends React.Component {
 		super(props);
 	}
 	render(){
-		// debugger
 		return(
 			<main className="nav">
 				<div className="logo">

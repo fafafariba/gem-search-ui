@@ -44,8 +44,8 @@ class SearchBar extends React.Component {
 			<main className="search-bar">
 				<form className="form" onSubmit={this.submitHandler}>
 					<input type="text" placeholder="Search" onChange={this.inputHandler} value={this.state.query} id={ this.errors ? "errors" : ""}/>
-					<button type="submit" className="magnify-btn">
-						<img src={'../../../assets/magnifying-glass.png'} alt="Search" id={ this.errors ? "errors" : ""}/>
+					<button type="submit" className="magnify-btn" id={ this.errors ? "errors" : ""}>
+						<img src={`../../../assets/magnifying-glass${this.errors ? "-error" : "" }.png`} alt="Search"/>
 					</button>
 				</form>
 				{errors}

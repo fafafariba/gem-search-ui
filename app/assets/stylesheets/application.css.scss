@@ -10,13 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+//  *= require_tree .
  *= require_self
  */
  @import 'base/_variables';
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
-//  @import 'base/layouts';
 //  @import 'base/reset';
+//  @import 'base/layouts';
 //  @import 'components/nav';
 //  @import 'components/search';

@@ -23,7 +23,7 @@ class Favorites extends React.Component {
 				<h1>Your Favorite Gems</h1>
 				<div className="gems-container">
 					{ Object.keys(localStorage).map(dep => (
-						<ul>
+						<ul key={dep}>
 							<li>
 								<img src={"../../assets/star-blue"} alt="Favorite" onClick={ () => this.favoriteRemover(dep) } />
 							</li>

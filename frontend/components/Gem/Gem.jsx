@@ -22,6 +22,14 @@ class Gem extends React.Component {
 
 		let gem = null;
 
+		let dependencies = <p>NONE</p>
+
+		if (this.props.dependencies && this.props.dependencies.length) {
+			dependencies = (
+				this.props.dependencies.map(name => <GemDependency name={name} />
+			));
+		}
+
 		if (this.props.name) {			
 			gem = (
 				<div>
@@ -40,13 +48,12 @@ class Gem extends React.Component {
 					<div className="gem-dependencies-container">
 						<h5>dependencies</h5>
 						<div className="gem-dependencies">
-							{this.props.dependencies.map(name => (
-								<GemDependency name={name} />
-							))}
+							{ dependencies }
 						</div>
 					</div>
 				</div>
 			);
+			
 		}
 
 		return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Link } from 'react-router-dom';
-import SearchBarContainer from './searchBarContainer';
-import GemContainer from './gemContainer';
+import SearchBarContainer from './SearchBarContainer';
+import GemContainer from '../Gem/GemContainer';
 
 class Search extends React.Component {
 	render() {

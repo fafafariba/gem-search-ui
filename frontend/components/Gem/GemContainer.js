@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Gem from './gem';
+import Gem from './Gem';
 
 const mapStateToProps = ({ gem }) => ({
 	name: gem.gem.name,

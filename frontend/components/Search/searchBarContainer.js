@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { queryGem, clearErrors } from '../../actions/gemActions';
-import SearchBar from './searchBar';
+import SearchBar from './SearchBar';
 
 const mapStateToProps = ({ gem }) => ({
 	errors: gem.errors

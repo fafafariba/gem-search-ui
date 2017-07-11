@@ -1,8 +1,8 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import Nav from './Nav/nav';
-import Search from './Search/search';
-import Favorites from './Favorites/favorites';
+import Nav from './Nav/Nav';
+import Search from './Search/Search';
+import Favorites from './Favorites/Favorites';
 
 const App = () => (
 	<main className="app">

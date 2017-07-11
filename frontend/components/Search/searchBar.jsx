@@ -6,10 +6,6 @@ class SearchBar extends React.Component {
 		this.state = { query: "" };
 		this.inputHandler = this.inputHandler.bind(this);
 		this.submitHandler = this.submitHandler.bind(this);
-		this.errors = this.props.errors;
-	}
-	componentWillReceiveProps(nextProps){
-		this.errors = nextProps.errors;
 	}
 
 	componentWillUnmount(){
@@ -29,23 +25,25 @@ class SearchBar extends React.Component {
 	}
 
 	errorHandler(){
-		if (this.errors) this.props.clearErrors();
+		if (this.props.errors) this.props.clearErrors();
 	}
 
 	render(){
 
 		let errors = <div></div>;
-		if (this.errors) {
+		
+		if (this.props.errors) {
 			errors = (
 				<p className="errors">Oh no! Looks like that gem can’t be found.</p>
 			);
 		}
+		
 		return (
 			<main className="search-bar">
 				<form className="form" onSubmit={this.submitHandler}>
-					<input type="text" placeholder="Search" onChange={this.inputHandler} value={this.state.query} id={ this.errors ? "errors" : ""}/>
-					<button type="submit" className="magnify-btn" id={ this.errors ? "errors" : ""}>
-						<img src={`../../../assets/magnifying-glass${this.errors ? "-error" : "" }.png`} alt="Search"/>
+					<input type="text" placeholder="Search" onChange={this.inputHandler} value={this.state.query} id={ this.props.errors ? "errors" : ""}/>
+					<button type="submit" className="magnify-btn" id={ this.props.errors ? "errors" : ""}>
+						<img src={`../../../assets/magnifying-glass${this.props.errors ? "-error" : "" }.png`} alt="Search"/>
 					</button>
 				</form>
 				{errors}

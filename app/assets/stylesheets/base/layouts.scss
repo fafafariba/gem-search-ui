@@ -1,5 +1,15 @@
 .app {
 	margin-left: 650px;
-	margin-top: 215px;
+	margin-top: 115px;
 	padding: 0;
+	min-width: 700px;
+	max-height: 774px;
+}
+
+@media screen and (max-width: 768px) {
+	.app {
+		margin: 0;
+		min-width: none;
+		max-height: none;
+	}
 }

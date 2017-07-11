@@ -1,18 +1,11 @@
 .nav {
 	
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
 	min-width: 532px;
 	min-height: 900px;
 	background-image: url('../map.png');
-
-	@media screen and (max-width: 1275px) and (min-width: 768px){
-		.nav {
-			background-color: rgba(255,255,255,0.17);
-			width: 20%;
-		}
-	}
 
 	.logo {
 		display: flex;
@@ -46,5 +39,14 @@
 		padding: 20px;
 		text-decoration: none;
 		}	
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.nav {
+		position: static;
+		background-repeat: no-repeat;
+    background-size: cover; 
+		background-position: center;
 	}
 }

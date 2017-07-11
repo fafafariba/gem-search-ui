@@ -1,6 +1,5 @@
 .favorites {
 	max-width: 700px;
-	margin-bottom: 100px;
 
 	h1 {
 		margin-bottom: 90px;
@@ -15,11 +14,36 @@
 			margin-bottom: 20px;
 			padding: 0;
 			display: flex;
-			min-width: 200px;
-
+			flex-basis: 30%;
 			li {
 				margin-right: 10px;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 769px) and (min-width: 416px) {
+	.favorites {
+		max-width: none;
+		margin: 75px;
+
+		h1 {
+			margin-bottom: 50px;
+		}
+		
+		.gems-container	ul {
+			flex-basis: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.favorites {
+		max-width: none;
+		margin: 0 30px;
+
+		.gems-container	ul {
+			flex-basis: 100%;
 		}
 	}
 }

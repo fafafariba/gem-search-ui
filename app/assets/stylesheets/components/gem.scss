@@ -1,7 +1,6 @@
 .gem {
 	max-width: 700px;
 	margin-left: 50px;
-	margin-bottom: 100px;
 	
 	ul {
 		padding: 0;
@@ -23,6 +22,7 @@
 			cursor: pointer;
 		}
 	}
+
 	.gem-info {
 		margin-top: 36px;
 
@@ -30,11 +30,20 @@
 			font-weight: 300;
 		}
 	}
-	.gem-dependencies {
-		margin-top: 34px;
 
-		ul {
-			margin-top: 16px;
+	.gem-dependencies-container {
+		margin-top: 34px;
+		.gem-dependencies {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			max-height: 350px;
+
+			ul {
+				flex-direction: row;
+				margin-top: 16px;
+				flex-basis: 50%;
+			}
 		}
 	}
 }

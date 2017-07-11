@@ -47,18 +47,20 @@ class Gem extends React.Component {
 						<h5>information</h5>
 						<p>{this.props.info}</p>
 					</div>
-					<div className="gem-dependencies">
+					<div className="gem-dependencies-container">
 						<h5>dependencies</h5>
-						{this.props.dependencies.map(name => (
-							<ul className="gem-name" key={name}>
-								<li>
-									<a href={`https://rubygems.org/gems/${name}`}>{name}</a>
-								</li>
-								<li>
-									<img src={`../../assets/star-${this.starred(name) ? "blue" : "gray"}`} alt="Favorite" onClick={ () => this.favoriteHandler(name) } />
-								</li>
-							</ul>
-						))}
+						<div className="gem-dependencies">
+							{this.props.dependencies.map(name => (
+								<ul className="gem-name" key={name}>
+									<li>
+										<a href={`https://rubygems.org/gems/${name}`}>{name}</a>
+									</li>
+									<li>
+										<img src={`../../assets/star-${this.starred(name) ? "blue" : "gray"}`} alt="Favorite" onClick={ () => this.favoriteHandler(name) } />
+									</li>
+								</ul>
+							))}
+						</div>
 					</div>
 				</div>
 			);

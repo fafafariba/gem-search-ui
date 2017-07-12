@@ -14,23 +14,12 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
+        exclude: /(node_modules)/,
         query: {
-          presets: ['react', 'es2015', 'env']
+          presets: ['react', 'es2015'],
+          plugins: ["transform-react-jsx", "transform-es2015-modules-commonjs"],
         }
-      },
-      {
-        test: /\.(woff2?|jpe?g|png|gif|svg|ico)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: '[name]-[hash].[ext]',
-            outputPath: 'webpack-assets/',
-            publicPath: '/assets/webpack-assets/',
-            limit: 10000,
-          },
-        },
       }
     ]
   },

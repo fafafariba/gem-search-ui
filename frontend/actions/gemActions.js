@@ -19,8 +19,12 @@ const receiveNoErrors = () => ({
 		errors: null
 });
 
-export const queryGem = gem => dispatch => (
-	GemAPIUtil.fetchGem(gem).then(gem => dispatch(receiveGem(gem))).catch(errors => dispatch(receiveErrors(errors.responseJSON.errors)))
+export const queryGem = query => dispatch => (
+	GemAPIUtil.fetchGem(query).then(gem => (
+		dispatch(receiveGem(gem))
+	), errors => (
+		dispatch(receiveErrors(errors.responseJSON.errors))
+	))
 );
 
 export const clearErrors = () => dispatch => (

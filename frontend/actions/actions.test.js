@@ -1,5 +1,5 @@
 import * as GemAPIUtil from '../utils/gemAPIUtil';
-import { RECEIVE_GEM, queryGem } from './gemActions';
+import { RECEIVE_GEM, CLEAR_ERRORS, queryGem, clearErrors } from './gemActions';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 
@@ -12,6 +12,10 @@ describe('Gem Actions', () => {
 		
 		test('should contain a RECEIVE_GEM constant', () => {
 			expect(RECEIVE_GEM).toEqual('RECEIVE_GEM');
+		});
+
+		test('should contain a CLEAR_ERRORS constant', () => {
+			expect(CLEAR_ERRORS).toEqual('CLEAR_ERRORS');
 		});
 	});
 
@@ -41,6 +45,22 @@ describe('Gem Actions', () => {
 				const expectedActions = [{ type: 'RECEIVE_GEM', gem: testGem }];
 
 				return store.dispatch(queryGem(testGem.name)).then(() => {
+					expect(store.getActions()).toEqual(expectedActions);
+				});
+			});
+		})
+
+		describe('clearErrors', () => {
+			
+			test('should export clearErrors function', () => {
+				expect(typeof clearErrors).toEqual('function');
+			});
+
+			test('dispatches CLEAR_ERRORS when called', () => {
+				
+				const expectedActions = [{ type: 'CLEAR_ERRORS', errors: null }];
+
+				return store.dispatch(clearErrors()).then(() => {
 					expect(store.getActions()).toEqual(expectedActions);
 				});
 			});

@@ -49,21 +49,5 @@ describe('Gem Actions', () => {
 				});
 			});
 		})
-
-		describe('clearErrors', () => {
-			
-			test('should export clearErrors function', () => {
-				expect(typeof clearErrors).toEqual('function');
-			});
-
-			test('dispatches CLEAR_ERRORS when called', () => {
-				
-				const expectedActions = [{ type: 'CLEAR_ERRORS', errors: null }];
-
-				return store.dispatch(clearErrors()).then(() => {
-					expect(store.getActions()).toEqual(expectedActions);
-				});
-			});
-		})
 	});
 })

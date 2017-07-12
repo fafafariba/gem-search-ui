@@ -1,4 +1,4 @@
-import { fetchGem } from '../utils/gemAPIUtil';
+import * as GemAPIUtil from '../utils/gemAPIUtil';
 
 export const RECEIVE_GEM = 'RECEIVE_GEM';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
@@ -20,7 +20,7 @@ const receiveNoErrors = () => ({
 });
 
 export const queryGem = gem => dispatch => (
-	fetchGem(gem).then(gem => dispatch(receiveGem(gem))).fail(errors => dispatch(receiveErrors(errors.responseJSON.errors)))
+	GemAPIUtil.fetchGem(gem).then(gem => dispatch(receiveGem(gem))).catch(errors => dispatch(receiveErrors(errors.responseJSON.errors)))
 );
 
 export const clearErrors = () => dispatch => (

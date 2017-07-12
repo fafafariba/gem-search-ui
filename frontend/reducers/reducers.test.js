@@ -4,13 +4,18 @@ import { createStore } from 'redux';
 
 
 const defaultState = { gem: {}, errors: null };
+const gem = {
+					name: 'gem', 
+					info: 'I am gem', 
+					dependencies: ['other-gem1', 'other-gem2']
+				}; 
 
-describe('Reducers', () => {
+describe.only('Reducers', () => {
   
 	describe('GemReducer', () => {
 
 		let oldState = { 
-			gem: {name: 'old-gem', info: 'old-info', dependencies: [] }, errors: ["Old Error"] 
+			gem: {name: 'old-gem', info: 'old-info', dependencies: [] }, errors: null 
 		};
     
 		test('exports an function', () => {
@@ -26,7 +31,7 @@ describe('Reducers', () => {
       expect(newState).toEqual(oldState);
     });
 
-    describe('handling the RECEIVE_GEM action', () => {
+    describe('Handling the RECEIVE_GEM action', () => {
       let action, gem;
 
       beforeEach(() => {
@@ -45,11 +50,11 @@ describe('Reducers', () => {
 
       test('should not modify the old state', () => {
         GemReducer(oldState, action);
-        expect(oldState).toEqual({ gem: {name: 'old-gem', info: 'old-info', dependencies: [] }, errors: ["Old Error"] });
+        expect(oldState).toEqual({ gem: {name: 'old-gem', info: 'old-info', dependencies: [] }, errors: null });
       });
 		});
 
-    describe('handling the RECEIVE_ERROR action', () => {
+    describe('Handling the RECEIVE_ERROR action', () => {
       let action, errors;
 
 			beforeEach(() => {
@@ -63,7 +68,7 @@ describe('Reducers', () => {
 			});
 		});
 
-    describe('handling the CLEAR_ERRORS action', () => {
+    describe('Handling the CLEAR_ERRORS action', () => {
       let action, state;
 
 			beforeEach(() => {
@@ -79,14 +84,9 @@ describe('Reducers', () => {
   });
 
   describe('RootReducer', () => {
-    let testStore, gem;
+    let testStore;
 
     beforeAll(() => {
-			gem = {
-					name: 'gem', 
-					info: 'I am gem', 
-					dependencies: ['other-gem1', 'other-gem2']
-				}; 
       testStore = createStore(RootReducer);
     });
 

@@ -1,7 +1,7 @@
 # Gem Search UI
 
 ## Purpose
-To create an app with user interface that connects to RubyGems API using a [gem](https://github.com/rubygems/gems). Refer to [original promot](https://github.com/fafafariba/gem-search-ui/blob/master/original-readme.md) for more information.
+To create an app with user interface that connects to RubyGems API using the wrapper [gem](https://github.com/rubygems/gems). Refer to [original prompt](https://github.com/fafafariba/gem-search-ui/blob/master/original-readme.md) for more information.
 
 ## Instructions
 
@@ -23,8 +23,6 @@ The app was created using Ruby on Rails, React-Redux, SCSS, Webpack, Babel.
 
 ### Design
 The app's layout is nearly pixel for pixel identical to the Sketch file. Adjustments search bar length were made to better accomodate browswer width and spacing was modified for consistency.
-
-### Testing
 
 ### RSpec Tests
 From directory, run `bundle exec rspec spec/requests/gems_spec.rb`

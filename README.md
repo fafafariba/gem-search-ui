@@ -16,20 +16,22 @@ On the command line:
  
 Go to `localhost:3000` in browser
 
-## Features
+## Tech and Tools
+The app was created using Ruby on Rails, React-Redux, SCSS, Webpack, and Babel.
 
-### Tech and Tools
-The app was created using Ruby on Rails, React-Redux, SCSS, Webpack, Babel.
+## Design
+React-Redux was selected as the frontend framework for its speed and ability to re-render after a change in state.
 
-### Design
+## UI/UX
 The app's layout is nearly pixel for pixel identical to the Sketch file. Adjustments search bar length were made to better accomodate browswer width and spacing was modified for consistency.
 
 The app is also responsive to optimize tablet and mobile viewing.
 
-### RSpec Tests
+### Tests
+#### RSpec
 From directory, run `bundle exec rspec spec/requests/gems_spec.rb`
 
-### Jest/Enzyme Tests 
+#### Jest/Enzyme
 From directory, run `yarn test` or `npm test`. To run individual tests, run `yarn test 'testName'` i.e. `yarn run 'reducers'`.
 
 Note: Due to time constraints, only the `'reducers', 'actions', 'util', 'store'` tests were completed.

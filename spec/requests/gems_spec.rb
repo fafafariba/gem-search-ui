@@ -7,7 +7,7 @@ RSpec.describe "RubyGems API", type: :request do
 		"    bcrypt() is a sophisticated and secure hash algorithm designed by The OpenBSD project\n    for hashing passwords. The bcrypt Ruby gem provides a simple wrapper for safely handling\n    passwords.\n"
 	}
 	let(:dependencies) {
-		{"development"=>[{"name"=>"rake-compiler", "requirements"=>"~> 0.9.2"}, {"name"=>"rdoc", "requirements"=>"~> 3.12"}, {"name"=>"rspec", "requirements"=>">= 3"}], "runtime"=>[]}
+		["rake-compiler", "rdoc", "rspec"]
 	}
 	let(:invalid_name) { "parser-" }
 

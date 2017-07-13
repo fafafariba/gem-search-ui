@@ -15,7 +15,7 @@ On the command line:
 Go to `localhost:3000` in browser
 
 ### RSpec Tests
-From directory, run `bundle exec spec spec/requests/gems_spec.rb`
+From directory, run `bundle exec rspec spec/requests/gems_spec.rb`
 
 ### Jest/Enzyme Tests 
 From directory, run `yarn test` or `npm test`. To run individual tests, run `yarn test 'testName'` i.e. `yarn run 'reducers'`.

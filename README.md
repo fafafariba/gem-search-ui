@@ -37,6 +37,6 @@ Note: Due to time constraints, only the `'reducers', 'actions', 'util', 'store'`
 ### Future Additions
 - Complete Jest/Enzyme component testing
 - Create user friendly submit button to replace magnifying glass when screen size decreases
-- Create a more readable layout for mobile and tablet viewing
-- Add pagination for when gem dependencies or favorites page overflows
+- Modify navigation to be more readable for mobile and tablet viewing
+- Add pagination for when gem dependencies or favorites containers overflow
 - Add expiration date to data stored in local storage

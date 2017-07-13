@@ -1,5 +1,9 @@
+body, main, div, ul, li, a, p, img {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	font-weight: 400;
 	letter-spacing: 1px;
 }
 
@@ -8,6 +12,9 @@ li {
 }
 
 a {
-	font-size: 18px;
+	font : {
+		weight: 400;
+		size: 18px;
+	}
 	letter-spacing: 1px;
 }

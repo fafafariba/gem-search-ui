@@ -1,7 +1,7 @@
 .search {
 	max-width: 700px;
 	h1 {
-		width: 100%;
+		min-width: 260px;
 		margin-left: 50px;
 		letter-spacing: 2px;
 	}
@@ -47,6 +47,56 @@
 		font : {
 			size: 24px;
 			weight: 700;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.search {
+		min-width: 400px;
+		max-width: 0;
+		margin-top: 60px;
+		margin-left: 50px;
+
+		h1 {
+			margin-bottom: 50px;
+		}
+
+		.search-bar {
+			.form {
+				input {
+					width: 580px;
+				}
+				.magnify-btn {
+					left: 520px;
+				}
+			}
+		}
+		.errors {
+			min-width: 580px;
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.search {
+		min-width: 200px;
+		margin-left: 30px;
+		.search-bar {
+			.form {
+				input {
+					width: 400px;
+				}
+				.magnify-btn {
+					left: 340px;
+				}
+			}
+		}
+		.errors {
+			min-width: 400px;
+			p {
+				text-align: center;
+			}
 		}
 	}
 }

@@ -34,7 +34,9 @@ class SearchBar extends React.Component {
 		
 		if (this.props.errors) {
 			errors = (
-				<p className="errors">Oh no! Looks like that gem can’t be found.</p>
+				<div className="errors">
+					<p>Oh no! Looks like that gem can’t be found.</p>
+				</div>
 			);
 		}
 		

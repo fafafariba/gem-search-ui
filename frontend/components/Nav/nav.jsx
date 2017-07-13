@@ -9,7 +9,7 @@ class Nav extends React.Component {
 		return(
 			<main className="nav">
 				<div className="logo">
-					<img src={'../../../assets/teachable-logo.png'} alt="teachable logo" />
+					<img src={'../../../assets/teachable-logo.png'} alt="Teachable Logo" />
 				</div>
 				<ul className="nav-links">
 					<li className={this.props.location.pathname === "/" ? "active" : ""}><Link to="/">Search</Link></li>

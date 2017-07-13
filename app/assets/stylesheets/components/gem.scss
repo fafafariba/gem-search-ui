@@ -25,10 +25,10 @@
 
 	.gem-info {
 		margin-top: 36px;
-
-		p {
-			font-weight: 300;
-		}
+	}
+	
+	p {
+		font-weight: 300;
 	}
 
 	.gem-dependencies-container {
@@ -38,12 +38,35 @@
 			flex-direction: column;
 			flex-wrap: wrap;
 			max-height: 350px;
+			flex-basis: 30%;
 
 			ul {
 				flex-direction: row;
 				margin-top: 16px;
-				flex-basis: 50%;
+				flex-basis: 30%;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.gem {
+		min-width: 400px;
+		max-width: 0;
+		margin: 60px;
+
+		.gem-dependencies-container {
+			.gem-dependencies {
+				flex-wrap: nowrap;
+				max-height: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.gem {
+		min-width: 340px;
+		margin: 30px;
 	}
 }

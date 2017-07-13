@@ -4,8 +4,19 @@ import GemDependency from './GemDependency';
 class Gem extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = {favorite: localStorage.getItem(this.props.name) ? true : false};
+		this.state = {favorite: this.isFavorite()};
 		this.favoriteHandler = this.favoriteHandler.bind(this);
+		this.isFavorite = this.isFavorite.bind(this);
+	}
+
+	isFavorite(name = this.props.name){
+		return localStorage.getItem(name) ? true : false
+	}
+
+	componentWillReceiveProps(nextProps){
+		if (this.props.name !== nextProps.name){
+			this.setState({favorite: this.isFavorite(nextProps.name)});
+		}
 	}
 
 	favoriteHandler(){
@@ -19,7 +30,6 @@ class Gem extends React.Component {
 	}
 
 	render(){
-
 		let gem = null;
 
 		let dependencies = <p>NONE</p>

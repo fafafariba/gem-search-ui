@@ -4,12 +4,15 @@ To create an app that renders [more info](https://github.com/fafafariba/gem-sear
 
 ## Instructions
 ### View App browser
-1. Clone repo
-2. Run `bundle install` on the command line to set up Rails backend
-3. Run `yarn` or `npm install` to set up React frontend
-4. Start server `rails s` on the command line.
-7. 
-6. Go to `localhost:3000` in browswer
+Clone this repo.
+
+On the command line:
+- `bundle install` to set up Rails backend
+- `yarn` or `npm install` to set up React frontend
+- `rails s` to start server
+- `yarn start` or `npm start` to launch Webpack
+ 
+Go to `localhost:3000` in browser
 
 ### RSpec Tests
 From directory, run `bundle exec spec spec/requests/gems_spec.rb`

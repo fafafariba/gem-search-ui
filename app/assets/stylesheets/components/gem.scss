@@ -70,3 +70,9 @@
 		margin: 30px;
 	}
 }
+
+@media screen and (max-width: 450px) {
+	.gem {
+		min-width: 300px;
+	}
+}

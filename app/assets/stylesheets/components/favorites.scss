@@ -25,16 +25,13 @@
 @media screen and (max-width: 768px) {
 	.favorites {
 		min-width: 400px;
-		max-width: 0;
+		width: 100%;
+		max-width: 536px;
 		margin-top: 60px;
 		margin-left: 100px;
 
 		h1 {
 			margin-bottom: 50px;
-		}
-		
-		.gems-container	ul {
-			flex-basis: 50%;
 		}
 	}
 }
@@ -42,13 +39,19 @@
 @media screen and (max-width: 650px) {
 	.favorites {
 		margin-left: 60px;
+		min-width: 400px;
+		.gems-container	ul {
+			flex-basis: 50%;
+		}
 	}
 }
 
 @media screen and (max-width: 510px) {
 	.favorites {
+		min-width: 300px;
+		width: 100%;
+		max-width: 340px;
 		margin-left: 60px;
-		min-width: 340px;
 		.gems-container	ul {
 			flex-basis: 100%;
 		}

@@ -55,9 +55,9 @@ $.ajax({
  ```
  
 ## UI/UX
-The app's layout is nearly pixel for pixel identical to the [Sketch file](https://github.com/fafafariba/gem-search-ui/blob/master/designs/fe-dev-test-june2017.sketch). Adjustments search bar length were made to better accomodate browswer width and spacing was modified for consistency.
+The app's layout is nearly pixel for pixel identical to the [Sketch file](https://github.com/fafafariba/gem-search-ui/blob/master/designs/fe-dev-test-june2017.sketch). Adjustments were made to the length of the search bar length to better accomodate browswer width and spacing was modified for consistency.
 
-The app is also responsive to optimize tablet and mobile viewing.
+The app is also responsive for optimized tablet and mobile viewing.
 
 ### Tests
 #### RSpec

@@ -22,7 +22,7 @@ The app was created using Ruby on Rails, React-Redux, SCSS, Webpack, and Babel.
 ## App Design
 React-Redux was selected as the frontend framework for its speed and ability to re-render after a change in state. 
 
-### Component Hiearchy
+### Component Hierarchy
 
 ```javascript
 <App />

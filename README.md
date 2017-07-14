@@ -19,9 +19,40 @@ Go to `localhost:3000` in browser
 ## Tech and Tools
 The app was created using Ruby on Rails, React-Redux, SCSS, Webpack, and Babel.
 
-## Design
-React-Redux was selected as the frontend framework for its speed and ability to re-render after a change in state.
+## App Design
+React-Redux was selected as the frontend framework for its speed and ability to re-render after a change in state. 
 
+### Component Hiearchy
+
+```javascript
+<App />
+ <Nav/>
+ <Favorites />
+ <Search />
+  <SearchBar />
+  <Gems />
+   <GemDependencies/>
+```
+### Store
+
+```javascript
+gem: {
+  gem: {
+    name: 'faker',
+    info: 'Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.',
+    dependencies: ['i18n']
+  errors: null
+  }
+}
+```
+### API Request
+
+```javascript
+$.ajax({
+ method: 'GET',
+ url: 'gems/faker'
+ ```
+ 
 ## UI/UX
 The app's layout is nearly pixel for pixel identical to the Sketch file. Adjustments search bar length were made to better accomodate browswer width and spacing was modified for consistency.
 

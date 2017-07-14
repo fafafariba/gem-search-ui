@@ -51,6 +51,7 @@ gem: {
 $.ajax({
  method: 'GET',
  url: 'gems/faker'
+})
  ```
  
 ## UI/UX
